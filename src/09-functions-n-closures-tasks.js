@@ -66,15 +66,15 @@ function getPowerFunction(exponent) {
  *   getPolynom(8)     => y = 8
  *   getPolynom()      => null
  */
-function getPolynom(/* args */) {
-  // const arg = [...args];
-  // return function count(x) {
-  //   let res = 0;
-  //   for (let i = 0; i < arg.length; i += 1) {
-  //     res += arg[i] * x ** arg[i];
-  //   }
-  //   return res;
-  // };
+function getPolynom(...args) {
+  const arg = [...args];
+  return function count(x) {
+    let res = 0;
+    for (let i = 0; i < arg.length; i += 1) {
+      res += arg[i] * x ** (arg.length - i - 1);
+    }
+    return res;
+  };
 }
 
 

@@ -192,7 +192,6 @@ function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 function findFirstSingleChar(/* str */) {
-
 }
 
 
